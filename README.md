@@ -1,5 +1,8 @@
 # DOI Library
 
+[![Build Status](https://secure.travis-ci.org/phluid61/libdoi.png)](http://travis-ci.org/phluid61/libdoi)
+[![Gem Version](https://badge.fury.io/rb/libdoi.png)](http://badge.fury.io/rb/libdoi)
+
 The library that lets you do stuff with DOIs.
 
 And stuff.
