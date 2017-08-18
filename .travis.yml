@@ -1,0 +1,13 @@
+branches:
+  except:
+    - gh-pages
+language: ruby
+rvm:
+  - ruby-head
+  - "2.4.1"
+  - jruby-9k
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-9k
+script: "bundle exec rake test"
