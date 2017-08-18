@@ -72,11 +72,99 @@
         <div class="page-header">
           <h1>phluid61</h1>
         </div>
-<div id="toc"><ul></ul></div><h1>DOI Library</h1>
+<div id="toc"><ul><li><a href="#gem-DOI">DOI</a></li></ul></div><h1>DOI Library</h1>
 
 <p>The library that lets you do stuff with DOIs.</p>
 
 <p>And stuff.</p>
+
+<hr>
+
+<h2 id="gem-DOI">DOI</h2>
+
+<h3>Constants</h3>
+
+<ul>
+<li><code>VERSION</code> = <code>&quot;1.0.0&quot;</code></li>
+</ul>
+
+<h3>Class Methods</h3>
+
+<h4><code>DOI::parse(str)</code></h4>
+
+<p>Parses the given string as a DOI.</p>
+
+<p>Raises an ArgumentError if parsing fails.</p>
+
+<h4><code>DOI::find(doi)</code></h4>
+
+<p>Looks for a DOI at doi.org.</p>
+
+<p>Returns a URI if it finds a match, otherwise returns nil.</p>
+
+<pre lang="ruby"><code>require &#39;doi/network&#39;
+
+url = DOI.find(&#39;10.17487/RFC8089&#39;)
+</code></pre>
+
+<h4><code>DOI::data(doi)</code></h4>
+
+<p>Gets data about a DOI from CrossRef.</p>
+
+<pre lang="ruby"><code>require &#39;doi/network&#39;
+
+data = DOI.data(&#39;10.17487/RFC8089&#39;)
+</code></pre>
+
+<h3>Instance Methods</h3>
+
+<h4><code>doi + other</code></h4>
+
+<p>Concatenation--Returns a new DOI containing <em>other</em> concatenated to this DOI&#39;s suffix string.</p>
+
+<h4><code>doi &lt;&lt; other</code></h4>
+
+<p>Append--Concatenates the given object to this DOI&#39;s suffix string.</p>
+
+<h4><code>doi.to_s(prefix: true)</code></h4>
+
+<p>Returns a String that represents this DOI.</p>
+
+<ul>
+<li><em>prefix</em>:  Prepends <code>&#39;doi:&#39;</code> to the returned string.</li>
+</ul>
+
+<h4><code>doi.to_uri(info: false)</code></h4>
+
+<p>Returns a URI.</p>
+
+<p>For example: <code>&quot;https://doi.org/10.1000/foo%23bar&quot;</code></p>
+
+<ul>
+<li><em>info</em>:  Returns an &#39;info:&#39; URI instead of &#39;https:&#39;</li>
+</ul>
+
+<h4><code>doi.find</code></h4>
+
+<p>Looks for a DOI at doi.org.</p>
+
+<p>Returns a URI if it finds a match, otherwise returns nil.</p>
+
+<pre lang="ruby"><code>require &#39;doi/network&#39;
+
+url = DOI.parse(&#39;10.17487/RFC8089&#39;).find
+</code></pre>
+
+<h4><code>doi.data</code></h4>
+
+<p>Gets data about this DOI from CrossRef.</p>
+
+<pre lang="ruby"><code>require &#39;doi/network&#39;
+
+data = DOI.parse(&#39;10.17487/RFC8089&#39;).data
+</code></pre>
+
+<hr>
 <pre id="license" class="no-highlight">Copyright (c) 2017, Matthew Kerwin <matthew@kerwin.net.au>
 
 Permission to use, copy, modify, and/or distribute this software for any
