@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = 'libdoi'
-  s.version  = '1.0.0'
+  s.version  = '1.0.1-dev'
   s.date     = '2017-08-18'
   s.summary  = %(DOI Library)
   s.description = <<EOS
