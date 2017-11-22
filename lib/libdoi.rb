@@ -5,7 +5,7 @@ require 'uri'
 
 class DOI
 
-  VERSION = '1.0.0'
+  VERSION = '1.0.0'.freeze
 
   def initialize dir, reg, dss #:nodoc:
     @dir = dir
@@ -78,7 +78,7 @@ class DOI
         # FIXME: $2 and $3 may contain characters outside of /\p{Graph}/
         new $1, $2, $3
       else
-        raise ArgumentError, "'#{str}' is not a valid DOI string";
+        raise ArgumentError, "'#{str}' is not a valid DOI string"
       end
     end
   end
