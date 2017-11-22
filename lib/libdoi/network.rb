@@ -60,7 +60,7 @@ private
 
   def _http_get uri, opts={}, &block
     Net::HTTP.start(uri.host, uri.port,
-                    :use_ssl=>uri.is_a?(URI::HTTPS),
+                    :use_ssl=>uri.is_a?(URI::HTTPS)
                    ) do |http|
       query = Net::HTTP::Get.new uri, 'Accept-Encoding'=>''
       query['Connection'] = 'close'

@@ -1,0 +1,35 @@
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+Layout/SpaceAroundOperators:
+  Enabled: false
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+Layout/TrailingBlankLines:
+  Enabled: false
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/HashSyntax:
+  #EnforcedStyle: hash_rockets
+  EnforcedStyle: no_mixed_keys
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/PerlBackrefs:
+  Enabled: false
+Style/RedundantSelf:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/UnneededInterpolation:
+  Enabled: false
