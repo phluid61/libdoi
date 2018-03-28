@@ -18,13 +18,13 @@ And stuff.
 
 ### Class Methods
 
-#### `DOI::parse(str)`
+#### `DOI::parse(str) → doi`
 
 Parses the given string as a DOI.
 
 Raises an ArgumentError if parsing fails.
 
-#### `DOI::find(doi)`
+#### `DOI::find(doi) → uri`
 
 Looks for a DOI at doi.org.
 
@@ -36,7 +36,7 @@ require 'doi/network'
 url = DOI.find('10.17487/RFC8089')
 ~~~
 
-#### `DOI::data(doi)`
+#### `DOI::data(doi) → hash`
 
 Gets data about a DOI from CrossRef.
 
@@ -48,21 +48,21 @@ data = DOI.data('10.17487/RFC8089')
 
 ### Instance Methods
 
-#### `doi + other`
+#### `doi + other → new_doi`
 
 Concatenation--Returns a new DOI containing _other_ concatenated to this DOI's suffix string.
 
-#### `doi << other`
+#### `doi << other → doi`
 
 Append--Concatenates the given object to this DOI's suffix string.
 
-#### `doi.to_s(prefix: true)`
+#### `doi.to_s(prefix: true) → str`
 
 Returns a String that represents this DOI.
 
 * _prefix_:  Prepends `'doi:'` to the returned string.
 
-#### `doi.to_uri(info: false)`
+#### `doi.to_uri(info: false) → uri`
 
 Returns a URI.
 
@@ -70,7 +70,7 @@ For example: `"https://doi.org/10.1000/foo%23bar"`
 
 * _info_:  Returns an 'info:' URI instead of 'https:'
 
-#### `doi.find`
+#### `doi.find → uri`
 
 Looks for a DOI at doi.org.
 
@@ -82,7 +82,7 @@ require 'doi/network'
 url = DOI.parse('10.17487/RFC8089').find
 ~~~
 
-#### `doi.data`
+#### `doi.data → hash`
 
 Gets data about this DOI from CrossRef.
 
