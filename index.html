@@ -75,7 +75,8 @@
 <div id="toc"><ul><li><a href="#gem-DOI">DOI</a></li></ul></div><h1>DOI Library</h1>
 
 <p><a href="http://travis-ci.org/phluid61/libdoi"><img src="https://secure.travis-ci.org/phluid61/libdoi.png" alt="Build Status"></a><br>
-<a href="http://badge.fury.io/rb/libdoi"><img src="https://badge.fury.io/rb/libdoi.png" alt="Gem Version"></a></p>
+<a href="http://badge.fury.io/rb/libdoi"><img src="https://badge.fury.io/rb/libdoi.png" alt="Gem Version"></a><br>
+<a href="https://houndci.com/"><img src="https://img.shields.io/badge/style%20guide-hound--ci-a873d1.svg" alt="Hound-CI"></a></p>
 
 <p>The library that lets you do stuff with DOIs.</p>
 
@@ -93,13 +94,13 @@
 
 <h3>Class Methods</h3>
 
-<h4><code>DOI::parse(str)</code></h4>
+<h4><code>DOI::parse(str) → doi</code></h4>
 
 <p>Parses the given string as a DOI.</p>
 
 <p>Raises an ArgumentError if parsing fails.</p>
 
-<h4><code>DOI::find(doi)</code></h4>
+<h4><code>DOI::find(doi) → uri</code></h4>
 
 <p>Looks for a DOI at doi.org.</p>
 
@@ -110,7 +111,7 @@
 url = DOI.find(&#39;10.17487/RFC8089&#39;)
 </code></pre>
 
-<h4><code>DOI::data(doi)</code></h4>
+<h4><code>DOI::data(doi) → hash</code></h4>
 
 <p>Gets data about a DOI from CrossRef.</p>
 
@@ -121,15 +122,15 @@ data = DOI.data(&#39;10.17487/RFC8089&#39;)
 
 <h3>Instance Methods</h3>
 
-<h4><code>doi + other</code></h4>
+<h4><code>doi + other → new_doi</code></h4>
 
 <p>Concatenation--Returns a new DOI containing <em>other</em> concatenated to this DOI&#39;s suffix string.</p>
 
-<h4><code>doi &lt;&lt; other</code></h4>
+<h4><code>doi &lt;&lt; other → doi</code></h4>
 
 <p>Append--Concatenates the given object to this DOI&#39;s suffix string.</p>
 
-<h4><code>doi.to_s(prefix: true)</code></h4>
+<h4><code>doi.to_s(prefix: true) → str</code></h4>
 
 <p>Returns a String that represents this DOI.</p>
 
@@ -137,7 +138,7 @@ data = DOI.data(&#39;10.17487/RFC8089&#39;)
 <li><em>prefix</em>:  Prepends <code>&#39;doi:&#39;</code> to the returned string.</li>
 </ul>
 
-<h4><code>doi.to_uri(info: false)</code></h4>
+<h4><code>doi.to_uri(info: false) → uri</code></h4>
 
 <p>Returns a URI.</p>
 
@@ -147,7 +148,7 @@ data = DOI.data(&#39;10.17487/RFC8089&#39;)
 <li><em>info</em>:  Returns an &#39;info:&#39; URI instead of &#39;https:&#39;</li>
 </ul>
 
-<h4><code>doi.find</code></h4>
+<h4><code>doi.find → uri</code></h4>
 
 <p>Looks for a DOI at doi.org.</p>
 
@@ -158,7 +159,7 @@ data = DOI.data(&#39;10.17487/RFC8089&#39;)
 url = DOI.parse(&#39;10.17487/RFC8089&#39;).find
 </code></pre>
 
-<h4><code>doi.data</code></h4>
+<h4><code>doi.data → hash</code></h4>
 
 <p>Gets data about this DOI from CrossRef.</p>
 
