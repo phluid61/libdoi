@@ -94,3 +94,10 @@ data = DOI.parse('10.17487/RFC8089').data
 
 ----
 
+## Contributing
+
+We require all contributors to comply with the [Developer Certificate of Origin](https://developercertificate.org/). This ensures that all contributions are properly licensed and attributed.
+
+[Contributor Code of Conduct](./code_of_conduct.md)
+
+[License](./LICENSE)
