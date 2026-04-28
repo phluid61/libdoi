@@ -91,12 +91,22 @@ require 'doi/network'
 data = DOI.parse('10.17487/RFC8089').data
 ~~~
 
-----
-
 ## Contributing
 
 We require all contributors to comply with the [Developer Certificate of Origin](https://developercertificate.org/). This ensures that all contributions are properly licensed and attributed.
 
-[Contributor Code of Conduct](./code_of_conduct.md)
 
-[License](./LICENSE)
+## Contributor Code of Conduct
+
+This repository is subject to a [Contributor Code of Conduct](code_of_conduct.md)
+adapted from the [Contributor Covenant][cc], version 3.0, available at
+<https://www.contributor-covenant.org/version/3/0/>
+
+
+[cc]: https://www.contributor-covenant.org
+
+
+## Licence
+
+This project is licensed under the ISC licence. See [LICENSE](LICENSE)
+for details
